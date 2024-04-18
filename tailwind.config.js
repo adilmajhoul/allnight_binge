@@ -1,3 +1,6 @@
+import { createThemes } from "tw-colors";
+// const { createThemes } = require("tw-colors");
+
 import { nextui } from "@nextui-org/theme";
 
 /** @type {import('tailwindcss').Config} */
@@ -111,28 +114,58 @@ module.exports = {
         dark: {
           colors: {
             primary: {
-              DEFAULT: "#BEF264",
+              // apple
+              DEFAULT: "#3eb142",
               foreground: "#000000",
-            },
-            focus: "#BEF264",
-            secondary: {
-              DEFAULT: "#28b90e",
-              foreground: "#000000",
+              50: "#f2fbf2",
+              100: "#e1f7e2",
+              200: "#c5edc6",
+              300: "#97de99",
+              400: "#62c665",
+              500: "#3eb142",
+              600: "#2c8d30",
+              700: "#266f29",
+              800: "#235825",
+              900: "#1e4921",
+              950: "#0c270e",
             },
           },
         },
         light: {
           colors: {
             primary: {
-              DEFAULT: "#BEF264",
+              // Persian Red
+              DEFAULT: "#2c6d2c",
               foreground: "#000000",
-            },
-            focus: "#BEF264",
-            secondary: {
-              DEFAULT: "#0eb947",
-              foreground: "#000000",
+              50: "#f4faf3",
+              100: "#e4f5e3",
+              200: "#c7ebc7",
+              300: "#9cda9b",
+              400: "#69c068",
+              500: "#43a443",
+              600: "#338633",
+              700: "#2c6d2c",
+              800: "#265526",
+              900: "#214622",
+              950: "#0d260e",
             },
           },
+        },
+      },
+    }),
+    createThemes({
+      light: {
+        primary: {
+          DEFAULT: "orange",
+          100: "red",
+          200: "blue",
+        },
+      },
+      dark: {
+        primary: {
+          DEFAULT: "red",
+          100: "lime",
+          200: "pink",
         },
       },
     }),
