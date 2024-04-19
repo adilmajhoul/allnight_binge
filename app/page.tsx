@@ -20,62 +20,66 @@ export default function Home() {
 
   return (
     <section className="flex flex-col  items-center justify-center gap-4 py-8 md:py-10">
-      <div className="flex flex-wrap gap-4">
-        <Button color={col} variant="bordered">
-          bordered
-        </Button>
-        <Button color={col} variant="faded">
-          faded
-        </Button>
-        <Button color={col} variant="flat">
-          flat
-        </Button>
-        <Button color={col} variant="ghost">
-          ghost
-        </Button>
-        <Button color={col} variant="light">
-          light
-        </Button>
-        <Button color={col} variant="shadow">
-          shadow
-        </Button>
-        <Button color={col} variant="solid">
-          solid
-        </Button>
-        <button className="theme-light bg-warning-500  border">button</button>
+      {/* <div className="flex flex-wrap gap-4"> */}
+      <Button color={col} variant="bordered">
+        bordered
+      </Button>
+      <Button color={col} variant="faded">
+        faded
+      </Button>
+      <Button color={col} variant="flat">
+        flat
+      </Button>
+      <Button color={col} variant="ghost">
+        ghost
+      </Button>
+      <Button color={col} variant="light">
+        light
+      </Button>
+      <Button color={col} variant="shadow">
+        shadow
+      </Button>
+      <Button color={col} variant="solid">
+        solid
+      </Button>
+      <button className="theme-light bg-warning-500  border">button</button>
 
-        <div>
-          The current theme is: {theme}
-          <Button onClick={() => setTheme("light")}>Light Mode</Button>
-          <Button onClick={() => setTheme("dark")}>Dark Mode</Button>
+      <div>
+        The current theme is: {theme}
+        <Button onClick={() => setTheme("light")}>Light Mode</Button>
+        <Button onClick={() => setTheme("dark")}>Dark Mode</Button>
+      </div>
+
+      <div>
+        <div data-theme="light">
+          light
+          <div className="bg-primary-600">800</div>
+          <div className="bg-primary-600">600</div>
+          <div className="bg-primary-600">300</div>
+          <div className="bg-primary-600">100</div>
         </div>
 
-        <div>
-          <div data-theme="light">
-            light
-            <div class="bg-primary-600">800</div>
-            <div class="bg-primary-600">600</div>
-            <div class="bg-primary-600">300</div>
-            <div class="bg-primary-600">100</div>
-          </div>
+        <div data-theme="dark">
+          dark
+          <div className="bg-primary-600">800</div>
+          <div className="bg-primary-600">600</div>
+          <div className="bg-primary-600">300</div>
+          <div className="bg-primary-600">100</div>
+        </div>
 
-          <div data-theme="dark">
-            dark
-            <div class="bg-primary-600">800</div>
-            <div class="bg-primary-600">600</div>
-            <div class="bg-primary-600">300</div>
-            <div class="bg-primary-600">100</div>
-          </div>
-
-          <div data-theme={theme}>
-            based on real theme which is --- {theme}
-            <div class="bg-primary-600">800</div>
-            <div class="bg-primary-600">600</div>
-            <div class="bg-primary-600">300</div>
-            <div class="bg-primary-600">100</div>
+        <div data-theme={theme}>
+          based on real theme which is --- {theme}
+          <div className="bg-primary-600">800</div>
+          <div className="bg-primary-600">600</div>
+          <div className="bg-primary-600">300</div>
+          <div className="bg-primary-600">100</div>
+          <div className="bg-apple bg-apple-dark p-4">
+            This is an apple colored div.
           </div>
         </div>
       </div>
+
+      {/* </div> */}
     </section>
   );
 }
